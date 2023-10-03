@@ -26,8 +26,8 @@ public class PartsService {
         partsRepository.deleteParts(new Part(name));
     }
 
-    public void putPart(Part part, int id) {
+    public void putPart(Part part, String name) {
 
-        partsRepository.putParts(part, id);
+        partsRepository.putParts(part, new Part(name));
     }
 }

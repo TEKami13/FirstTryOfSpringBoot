@@ -33,9 +33,9 @@ public class PartsController {
         partsService.deletePart(name);
     }
 
-    @PutMapping("{id}")
-    public void putPart(@RequestBody Part part, @PathVariable int id) {
+    @PutMapping("{name}")
+    public void putPart(@RequestBody Part part, @PathVariable String name) {
 
-        partsService.putPart(part, id);
+        partsService.putPart(part, name);
     }
 }
