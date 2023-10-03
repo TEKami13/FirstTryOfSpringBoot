@@ -11,10 +11,12 @@ public class PartsRepository {
 
 
     public ArrayList<Part> getParts() {
+
         return parts;
     }
 
     public PartsRepository() {
+
         parts.add(new Part("gear"));
         parts.add(new Part("cog"));
     }
@@ -25,10 +27,12 @@ public class PartsRepository {
     }
 
     public void deleteParts(Part part) {
+
         parts.remove(part);
     }
 
     public void putParts(Part part, int id) {
+
         parts.remove(id);
         parts.add(id, part);
     }
