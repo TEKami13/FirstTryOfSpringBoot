@@ -12,18 +12,22 @@ public class PartsService {
     private PartsRepository partsRepository;
 
     public List<Part> getParts() {
+
         return partsRepository.getParts();
     }
 
     public void addPart(Part part) {
+
         partsRepository.addParts(part);
     }
 
     public void deletePart(String name) {
+
         partsRepository.deleteParts(new Part(name));
     }
 
     public void putPart(Part part, int id) {
+
         partsRepository.putParts(part, id);
     }
 }
