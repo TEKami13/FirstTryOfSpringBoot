@@ -23,4 +23,12 @@ public class PartsRepository {
         parts.add(part);
     }
 
+    public void deleteParts(Part part) {
+        parts.remove(part);
+    }
+
+    public void putParts(Part part, int id) {
+        parts.remove(id);
+        parts.add(id, part);
+    }
 }

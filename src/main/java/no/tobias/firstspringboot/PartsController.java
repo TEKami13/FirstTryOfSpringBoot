@@ -2,14 +2,13 @@ package no.tobias.firstspringboot;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/parts")
 @Slf4j
 public class PartsController {
 
@@ -17,12 +16,26 @@ public class PartsController {
     private PartsService partsService;
 
     @GetMapping()
-    public String getHello() {
-        return "Hello";
+    public ResponseEntity<List<Part>> getParts() {
+
+        return ResponseEntity.ok(partsService.getParts());
     }
 
-    @GetMapping("/parts")
-    public List<Part> getParts() {
-        return partsService.getParts();
+    @PostMapping()
+    public void addParts(@RequestBody Part part) {
+
+        partsService.addPart(part);
+    }
+
+    @DeleteMapping("{name}")
+    public void deletePart(@PathVariable String name) {
+
+        partsService.deletePart(name);
+    }
+
+    @PutMapping("{id}")
+    public void putPart(@RequestBody Part part, @PathVariable int id) {
+
+        partsService.putPart(part, id);
     }
 }

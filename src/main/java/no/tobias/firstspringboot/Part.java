@@ -1,5 +1,10 @@
 package no.tobias.firstspringboot;
 
-public record Part(String name) {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties
+public record Part(
+        String name
+) {
 }
