@@ -17,6 +17,11 @@ public class PartsController {
 
     @GetMapping()
     public ResponseEntity<List<Part>> getParts() {
+        //var bigPart = BigPart.builder()
+        //        .partName("heu")
+        //        .partNumber(1)
+        //        .numberOfChickens(2).
+        //        build();
 
         return ResponseEntity.ok(partsService.getParts());
     }
