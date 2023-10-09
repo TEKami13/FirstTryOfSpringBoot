@@ -4,3 +4,6 @@ server:
 
 jason:
   happyWord: "Pirate"
+
+rnd:
+  number: ${random.int(1,100)}
