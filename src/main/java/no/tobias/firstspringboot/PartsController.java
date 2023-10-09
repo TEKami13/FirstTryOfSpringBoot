@@ -27,9 +27,9 @@ public class PartsController {
     }
 
     @PostMapping()
-    public void addParts(@RequestBody Part part) {
+    public void addParts(@RequestBody Part partTest) {
 
-        partsService.addPart(part);
+        partsService.addPart(partTest);
     }
 
     @DeleteMapping("{name}")
