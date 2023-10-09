@@ -1,0 +1,6 @@
+server:
+    port: 8181
+
+
+jason:
+  happyWord: "Pirate"
