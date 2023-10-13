@@ -31,8 +31,8 @@ public class PartsRepository {
         parts.remove(part);
     }
 
-    public void putParts(Part part, Part newPart) {
+    public void putParts(Part newPart, Part part) {
 
-        parts.set(parts.indexOf(part), newPart);
+        parts.set(parts.indexOf(newPart), part);
     }
 }
