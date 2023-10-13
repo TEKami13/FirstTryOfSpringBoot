@@ -30,8 +30,8 @@ public class PartsService {
         partsRepository.deleteParts(new Part(name));
     }
 
-    public void putPart(Part part, String name) {
+    public void putPart(Part part, Part name) {
 
-        partsRepository.putParts(part, new Part(name));
+        partsRepository.putParts(part, name);
     }
 }

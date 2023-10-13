@@ -55,8 +55,9 @@ public class PartsController {
     }
 
     @PutMapping("{name}")
-    public void putPart(@RequestBody Part part, @PathVariable String name) {
+    public ResponseEntity<String> putPart(@RequestBody Part part, @PathVariable Part name) {
 
         partsService.putPart(part, name);
+        return ResponseEntity.ok("hey");
     }
 }
