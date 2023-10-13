@@ -37,18 +37,18 @@ public class PartsServerIntegrationTest {
                 .andExpect(content().string(containsString("cog")));
     }
 
-    //@Test
-    //@Order((2))
-    //void shouldEditPart() throws Exception{
-    //    mockMvc
-    //            .perform(put("/api/parts/wrench").contentType(MediaType.APPLICATION_JSON).content("{\"name\":\"cog\"}"))
-    //            .andExpect(status().isOk());
-    //    mockMvc
-    //            .perform(get("/api/parts"))
-    //            .andExpect(status().isOk())
-    //            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-    //            .andExpect(content().string(containsString("wrench")));
-    //}
+    @Test
+    @Order((2))
+    void shouldEditPart() throws Exception{
+        mockMvc
+                .perform(put("/api/parts/wrench").contentType(MediaType.APPLICATION_JSON).content("{\"name\":\"cog\"}"))
+                .andExpect(status().isOk());
+        mockMvc
+                .perform(get("/api/parts"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(content().string(containsString("wrench")));
+    }
 
     @Test
     @Order(3)
