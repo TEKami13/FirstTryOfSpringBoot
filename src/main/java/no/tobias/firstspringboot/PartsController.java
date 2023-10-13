@@ -39,10 +39,6 @@ public class PartsController {
         System.out.println(number);
         System.out.println(number2);
 
-        for (int i = 0; i <= 2; i++) {
-            System.out.println(ng.getNumber());
-        }
-
         return ResponseEntity.ok(partsService.getParts());
     }
 
