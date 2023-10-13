@@ -11,7 +11,7 @@ import lombok.*;
 //@Builder
 public class BigPart {
 
-    private String partName;
+    private String partsName;
     private int partNumber;
     private int numberOfChickens;
 }
