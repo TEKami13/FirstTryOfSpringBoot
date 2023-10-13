@@ -33,6 +33,6 @@ public class PartsRepository {
 
     public void putParts(Part newPart, Part part) {
 
-        parts.set(parts.indexOf(newPart), part);
+        parts.set(parts.indexOf(part), newPart);
     }
 }
