@@ -42,10 +42,17 @@ public class PartsController {
         return ResponseEntity.ok(partsService.getParts());
     }
 
+    @GetMapping("/error")
+    public ResponseEntity<String> testError() {
+        throw new IllegalArgumentException("something went wrong");
+    }
+
     @PostMapping()
-    public void addParts(@RequestBody Part part) {
+    public ResponseEntity<String> addParts(@RequestBody Part part) {
 
         partsService.addPart(part);
+        return ResponseEntity.ok("hey");
+
     }
 
     @DeleteMapping("{name}")

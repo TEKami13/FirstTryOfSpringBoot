@@ -22,7 +22,7 @@ public class PartsRepository {
     }
 
     public void addParts(Part part) {
-
+        if (part.name().equals("fish")) throw new AddPartsException();
         parts.add(part);
     }
 

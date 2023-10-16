@@ -1,4 +1,4 @@
 package no.tobias.firstspringboot;
 
-public class AddPartsException{
+public class AddPartsException extends RuntimeException{
 }
